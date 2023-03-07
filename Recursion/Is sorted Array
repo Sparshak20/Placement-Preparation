@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+bool issortedarray(int arr[],int size)
+{
+    //base case
+    if(size==0||size==1)
+    {
+        return true;
+    }
+    if(arr[0]>arr[1])
+    {
+        return false;
+    }
+    else{
+        bool ans= issortedarray(arr+1,size-1); // array will point to next element and the size of the array will decrease
+    return ans;
+    }
+
+
+}
+int main()
+{
+    int arr[5]={2,14,342,355,1002};
+    int size=5;
+    bool ans=issortedarray(arr,size);
+    if(ans){
+        cout<<"Array sorted"<<endl;
+    }
+    else{
+        cout<<"Not sorted"<<endl;
+    }
+
+    return 0;
+}
