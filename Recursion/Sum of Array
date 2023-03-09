@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+int sumofarray(int arr[],int size)
+{
+    //base case
+    if(size==0)
+    {
+        return 0;
+    }
+
+    // recursive case
+    if(size==1)
+    {
+        return arr[0];
+    }
+    else
+    {
+        return arr[0]+sumofarray(arr+1,size-1);
+    }
+
+}
+int main()
+{
+    int arr[10]= {33,1,2,4,6,5};
+    int size=5;
+    cout<<sumofarray(arr,size);
+    return 0;
+}
