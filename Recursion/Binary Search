@@ -3,7 +3,7 @@
 using namespace std;
 bool bs(int arr[],int s,int e,int key)
 {
-    //base case
+    //base  case
     if(s>e)
     {
         return false;
